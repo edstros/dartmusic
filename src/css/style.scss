@@ -5,11 +5,13 @@
 /*
 Bootstrap is controlling most of the styling, this just makes everything conform to the screenshot
 */
+.centerMe {text-align: center;}
 .navbar-brand {
   color: #337ab7!important;
 }
 nav {
   background-color: white;
+  margin: 1em;
   ul {
     margin: 0;
     padding: 0;

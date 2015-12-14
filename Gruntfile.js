@@ -23,7 +23,7 @@ module.exports = function (grunt) {
       },
       build: {
         files: {
-          'dist/js/main.min.js': 'src/js/main.js' //minify js files
+          'dist/js/main.js': 'src/**/*.js'
         }
       }
     },
@@ -66,7 +66,6 @@ module.exports = function (grunt) {
         options: {
           livereload: true
         },
-
         files: [
           'dist/css/style.css',
           'dist/js/**/*.js',
@@ -78,6 +77,4 @@ module.exports = function (grunt) {
   /* LOAD GRUNT PLUGINS
      ======================================= */
   grunt.registerTask('default', ['jshint', 'uglify', 'sass', 'copy', 'connect', 'watch']);
-
-
 };

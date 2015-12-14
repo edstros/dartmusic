@@ -26,9 +26,10 @@ body {
   width: 100px; }
 
 /*we'll center this in the viewport*/
-.container {
+.jsContainer {
   margin: auto;
   padding: 10px;
+  text-align: center;
   width: 300px; }
 
 /*centering the button, too*/
@@ -39,11 +40,15 @@ body {
 /*
 Bootstrap is controlling most of the styling, this just makes everything conform to the screenshot
 */
+.centerMe {
+  text-align: center; }
+
 .navbar-brand {
   color: #337ab7 !important; }
 
 nav {
-  background-color: white; }
+  background-color: white;
+  margin: 1em; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -81,7 +86,7 @@ default bootstrap buttons don't have gloss, so I used a button generator to crea
   background-image: linear-gradient(to bottom, #dedede, #dedede);
   border-color: #c7c7c7; }
 
-/*this center the email form at the top of the page*/
+/*this centers the email form at the top of the page*/
 .newsletter {
   margin: 0 auto 10px;
   text-align: center;
