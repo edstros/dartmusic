@@ -1,3 +1,5 @@
+/* importing reset and js to compile everything in one css file */
+/*just a quick normalize */
 html,
 body,
 ul,
@@ -5,9 +7,13 @@ ol {
   margin: 0;
   padding: 0; }
 
+/*
+since html.html is light gray, we'll make all of them light gray
+*/
 body {
   background-color: lightgray; }
 
+/*makes the div round, mixin catches all of the potential browser compatibility issues of .target */
 .target {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -19,12 +25,22 @@ body {
   margin: auto;
   width: 100px; }
 
+/*we'll center this in the viewport*/
 .container {
   margin: auto;
-  padding: 10px; }
+  padding: 10px;
+  width: 300px; }
 
+/*centering the button, too*/
 .trigger {
-  margin: auto; }
+  margin: 10px auto;
+  display: block; }
+
+/*
+Bootstrap is controlling most of the styling, this just makes everything conform to the screenshot
+*/
+.navbar-brand {
+  color: #337ab7 !important; }
 
 nav {
   background-color: white; }
@@ -39,14 +55,20 @@ nav {
     display: block;
     padding: 6px 12px;
     text-decoration: none; }
+  nav a:hover {
+    color: #333 !important; }
 
+/*this is for the divs*/
 .testColumn {
   background-color: white;
-  border: lightgray  solid 1px;
+  border: lightgray solid 1px;
   border-radius: 3px;
   box-sizing: border-box;
   padding: 1em; }
 
+/*
+default bootstrap buttons don't have gloss, so I used a button generator to create the code for a glossy button. http://www.tutorialrepublic.com/twitter-bootstrap-button-generator.php
+*/
 .btn.btn-success {
   color: #333;
   background-color: #030303;
@@ -59,15 +81,12 @@ nav {
   background-image: linear-gradient(to bottom, #dedede, #dedede);
   border-color: #c7c7c7; }
 
+/*this center the email form at the top of the page*/
 .newsletter {
-  display: relative;
   margin: 0 auto 10px;
   text-align: center;
- }
+  width: 50%; }
 
 .newsletterLabel {
   font-size: 1.6em;
   display: block; }
-
-.navbar-brand {
-  color: #337ab7 !important; }

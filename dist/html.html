@@ -1,18 +1,15 @@
 <!--
-
 // Html, Css test
-
 Explain and comment your work!
-
 1. Look at this page layout http://prntscr.com/9c99ds
 2. Explain here how you would approach building this page, and what challenges you see.
 3. Write the HTML and CSS code to render a page that looks like this. Please make it responsive.
 4. If you do not know how, explain how you would figure it out.
-
 Extra credit if you use a framework or compiler
-
 -->
 
+
+<!--boilerplate html5 template-->
 <!doctype html>
 <html lang="en">
 
@@ -24,14 +21,10 @@ Extra credit if you use a framework or compiler
   <title>Edwin Acevedo's Code Test | Dart Music</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
   <link rel="stylesheet" href="/dist/css/style.css">
-
-
 </head>
 
 <body>
   <div class="container">
-
-
     <nav role="navigation" class="navbar navbar-default">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -50,43 +43,36 @@ Extra credit if you use a framework or compiler
           <li><a href="#">Item 2</a></li>
           <li><a href="#">Item 3</a></li>
         </ul>
-
       </div>
     </nav>
-    <div class="row col-lg-12">
+    <div class="row">
       <div class="form-inline newsletter">
         <label for="emailSignup" class="newsletterLabel">Join our newsletter</label>
         <input type="email" class="form-control" id="emailSignup" placeholder="Email">
         <input type="button" class="btn btn-success" value="Submit">
       </div>
     </div>
-
-
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="col-md-12 testColumn">
-            <h2>Column 1</h2>
-            <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef.</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-md-12 testColumn">
-            <h2>Column 2</h2>
-            <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef.</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-md-12 testColumn">
-            <h2>Column 3</h2>
-            <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef.</p>
-          </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="col-md-12 testColumn">
+          <h2>Column 1</h2>
+          <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef. In tenderloin pancetta cillum ham ut jerky capicola filet mignon pork loin turducken corned beef doner. Cillum labore occaecat meatball flank porchetta culpa short loin salami lorem brisket. Commodo short ribs frankfurter pastrami, qui filet mignon rump cow capicola lorem pork chop quis mollit dolore. Nostrud incididunt exercitation culpa voluptate shoulder ad, salami in. In chicken shoulder short loin cow.</p>
         </div>
       </div>
-
-
+      <div class="col-sm-4">
+        <div class="col-md-12 testColumn">
+          <h2>Column 2</h2>
+          <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef. In tenderloin pancetta cillum ham ut jerky capicola filet mignon pork loin turducken corned beef doner. Cillum labore occaecat meatball flank porchetta culpa short loin salami lorem brisket. Commodo short ribs frankfurter pastrami, qui filet mignon rump cow capicola lorem pork chop quis mollit dolore. Nostrud incididunt exercitation culpa voluptate shoulder ad, salami in. In chicken shoulder short loin cow.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-md-12 testColumn">
+          <h2>Column 3</h2>
+          <p>Bacon ipsum dolor amet nostrud turkey commodo filet mignon ut mollit pastrami. Nisi porchetta irure brisket in meatloaf turkey dolore. Chicken pork belly jowl leberkas veniam elit beef biltong cow labore minim tail jerky. Pastrami veniam est, fatback adipisicing sint bresaola in eu flank cupidatat sausage pork chop. Cupim pancetta chicken, flank aliqua proident sed ipsum qui ut corned beef. In tenderloin pancetta cillum ham ut jerky capicola filet mignon pork loin turducken corned beef doner. Cillum labore occaecat meatball flank porchetta culpa short loin salami lorem brisket. Commodo short ribs frankfurter pastrami, qui filet mignon rump cow capicola lorem pork chop quis mollit dolore. Nostrud incididunt exercitation culpa voluptate shoulder ad, salami in. In chicken shoulder short loin cow.</p>
+        </div>
+      </div>
+    </div>
   </div>
-
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous">
   </script>

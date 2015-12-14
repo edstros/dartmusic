@@ -1,60 +1,83 @@
+<!--I am using these resources:
+1. "Professional WordPress Design and Development," by Brad Williams, David Damstra and Hal Stern (Wiley & Sons, 2013)
+2. codex.wordpress.org
+3. https://www.elegantthemes.com/blog/tips-tricks/how-to-create-wordpress-custom-fields
+4. There is also some guesswork.
+-->
+
+
 <?php
-
 /*
-
 Below is a basic archive template for WordPress.
-
 1. Comment it to describe what the code is doing.
 2. Describe here what you would change, for semantics, for optimiation, or anything else.
 3. Assume each post has a custom field called "celebrity", to describe the celebrity the post was written about. Add the code needed to display the name of the celebrity with each post.
-
 */
-
 get_header(); ?>
 
+  <div class="row">
+    <!--bootstrap css-->
+    <section class="col col-sm-9 col-main" role="main">
+      <!--more bootstrap css, -->
 
+      <h1><?php _e( 'Archives', 'custom' ); ?></h1>
+      <!--returns Archives as h1, and will be translated if necessary-->
 
-<div class="row">
-	<section class="col col-sm-9 col-main" role="main">
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <!--check for posts or pages to be displayed on current page, if so starts the WordPress loop and load all post data -->
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <!--display the unique id of the post-->
+          <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+            <!--Returns a boolean if a post has a Featured Image attached (true) or not (false). -->
 
-		<h1><?php _e( 'Archives', 'custom' ); ?></h1>
-
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); ?>
-			</a>
-<?php endif; ?>
-
-			<h2>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+              <!--the permalink and the title on the thumbnails-->
+              <?php the_post_thumbnail(array(120,120)); ?>
+              <!--if the thumbnail exists, display it 120px x 120px-->
+            </a>
+            <?php endif; ?>
+             <!--closes the thumbnails loop-->
+              <h2>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</h2>
+             <!--display the permalink and title on the h2-->
+              <p class="date">
+                <?php the_time('F j, Y'); ?>
+                  <?php the_time('g:i a'); ?>
+              </p>
+<!--time and date of post-->
+              <p class="author">
+                <?php _e( 'Published by', 'custom' ); ?>
+                  <?php the_author_posts_link(); ?>
+              </p>
+              <!--the author of the post-->
+              <p class="comments">
+                <?php comments_popup_link( __( 'Leave your thoughts', 'custom' ), __( '1 Comment', 'custom' ), __( '% Comments', 'custom' )); ?>
+              </p>
+              <?php the_excerpt(); ?>
+<!--the trimmed-down version of the full post, which will be followed by a "more"-->
+        <?php the_meta(); ?>
+        <ul class="post-meta">
+<li><span class="post-meta-key">Celebrity:</span>Adele</li>
+</ul>
+        </article>
 
-			<p class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></p>
-			<p class="author"><?php _e( 'Published by', 'custom' ); ?> <?php the_author_posts_link(); ?></p>
-			<p class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'custom' ), __( '1 Comment', 'custom' ), __( '% Comments', 'custom' )); ?></p>
+        <?php endwhile; ?>
+          <!--closes the if (have_posts()) loop-->
+          <?php else: ?>
+            <!--calls the end of the loop-->
+            <article>
+              <h2><?php _e( 'Sorry, nothing to display.', 'custom' ); ?></h2>
+              <!--fires if if (have_posts()) : comes up empty-->
+            </article>
+            <!--catching errors-->
+            <?php endif; ?>
+              <!--end of the error loop-->
+    </section>
+    <?php get_sidebar(); ?>
+    <!--displays the sidebar-->
+  </div>
+  <!-- row -->
 
-			<?php the_excerpt(); ?>
-
-		</article>
-<?php endwhile; ?>
-
-<?php else: ?>
-
-		<article>
-			<h2><?php _e( 'Sorry, nothing to display.', 'custom' ); ?></h2>
-		</article>
-
-<?php endif; ?>
-	</section>
-
-	<?php get_sidebar(); ?>
-
-</div><!-- row -->
-
-
-
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
+    <!--displays the footer.php file content-->

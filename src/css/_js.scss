@@ -1,3 +1,6 @@
+//Only js.html uses this code
+
+/*makes the div round, mixin catches all of the potential browser compatibility issues of .target */
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -6,7 +9,7 @@
 }
 
 .target {
-  @include border-radius(50%);
+  @include border-radius(50%); //so we get the mixin
   background-color: #ff0000;
   display: block;
   height: 100px;
@@ -14,11 +17,14 @@
   width: 100px;
 }
 
-
+/*we'll center this in the viewport*/
 .container {
   margin: auto;
   padding: 10px;
+  width: 300px;
 }
+/*centering the button, too*/
 .trigger {
-  margin: auto;
+  margin: 10px auto;
+  display: block;
 }

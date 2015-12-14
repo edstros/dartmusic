@@ -1,3 +1,4 @@
+/*just a quick normalize */
 html,
 body,
 ul,
@@ -5,6 +6,11 @@ ol {
    margin: 0;
   padding: 0;
 }
+
+/*
+since html.html is light gray, we'll make all of them light gray
+*/
+
 body {
   background-color: lightgray;
 }
