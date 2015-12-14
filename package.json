@@ -1,0 +1,30 @@
+{
+  "name": "dartmusic",
+  "version": "1.0.0",
+  "description": "code test",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edstros/dartmusic.git"
+  },
+  "author": "Edwin Acevedo (edwin.a.acevedo@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edstros/dartmusic/issues"
+  },
+  "homepage": "https://github.com/edstros/dartmusic#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass": "latest",
+    "jshint-stylish": "latest",
+    "load-grunt-tasks": "latest"
+  }
+}
